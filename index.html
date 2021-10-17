@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>WELCOME TO HAESOL WORLD</title>
+        <meta charset = "utf-8">
+        <style>
+          #container {
+            position:relative;
+            left:60%;
+          }
+          #container2 {
+            margin-left: 35%;
+          }
+          #container3 {
+            margin-left: 35%;
+          }
+        </style>
+        <script>
+              var Body = {
+                setColor : function(color){
+                  document.querySelector('body').style.color = color;
+                  },
+                  setBackgroundColor : function(color){
+                    document.querySelector('body').style.backgroundColor = color;
+                  }
+                }
+
+              function nightDayHandler(self){
+              var target = document.querySelector('body');
+              if (self.value === '밤 모드'){
+                Body.setBackgroundColor('black');
+                Body.setColor('yellow');
+                self.value = '낮 모드'
+                document.getElementById('container2').innerHTML = "주로 하는 일 : 랑이 돌보기"
+              }
+              else {
+                Body.setBackgroundColor('powderblue');
+                Body.setColor('black');
+                self.value = '밤 모드'
+                document.getElementById('container2').innerHTML = "주로 하는 일 : 애플리케이션 기획"
+              }
+            }
+        </script>
+    </head>
+
+    <body>
+      <body bgcolor='powderblue'>
+      <h1><center>해솔이가 궁금해♫♪</center></h1>
+      <div id="container">
+        <input id="이중생활" type = "button" value = "밤 모드" onclick = "
+        nightDayHandler(this);">
+      </div>
+      <div id="container2" onclick = "nightDayHandler(this);">
+        주로 하는 일 : 애플리케이션 기획
+    </body>
+  </html>
